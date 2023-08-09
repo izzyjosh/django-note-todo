@@ -1,0 +1,44 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="{% static 'css/signup.css' %}" rel="stylesheet">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Sign Up</h1>
+            {% for message in messages%}
+            <p>{{message}}</p>
+            {%endfor%}
+        </header>
+        <main>
+            <form action="" method="post">
+                {%csrf_token%}
+                <div class="form-container">
+                    <input type="text" name="username" class="user-data" placeholder="username" required>
+                    <input type="password" name="password" class="user-data" placeholder="password" required>
+                    <button class="btn">save</button>
+                </div>
+            </form>
+        </main>
+        <footer>
+            <p>forgotten password ? <a href="{% url 'reset_password' %}">Reset Password</a></p>
+            <br>
+            <br>
+            <br>
+            <p>Don't have an account?<a href="{% url 'signup' %}">signup</a></p>
+            <p>codewitizzy&copy;2023</p>
+        </footer>
+
+</body>
+</div>
+</body>
+
+</html>

@@ -1,16 +1,16 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.models import User, auth
 from django.contrib import messages
-from django.contrib.auth.decorators import @ login_required
+from django.contrib.auth.decorators import login_required
 
 
 # function that handle the signup process
 def signup(request):
     if request.method == "POST":
-        username = request.POST, get("username")
+        username = request.POST.get("username")
         email = request.POST.get("email")
         password = request.POST.get("password")
-        confirm_password = request.POST.get("confirm_password")
+        confirm_password = request.POST.get("password1")
 
         if not User.objects.filter(username=username).exists():
             if not User.objects.filter(email=email).exists():
