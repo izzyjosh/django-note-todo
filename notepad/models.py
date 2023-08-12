@@ -2,7 +2,7 @@ from django.db import models
 from django.contrib.auth.models import User
 
 
-class Category(models.model):
+class Category(models.Model):
     name = models.CharField(max_length=50)
 
     def __str__(self):
@@ -20,4 +20,4 @@ class Note(models.Model):
         return self.title
 
     class Meta:
-        order_by = ["date"]
+        ordering = ["date"]

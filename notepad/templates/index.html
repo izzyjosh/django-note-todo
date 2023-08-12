@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Notepad</title>
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
 </head>
 <body>
    <header>
@@ -20,9 +22,10 @@
    </header> 
    <main>
         <form action="" method="get">
-            <input type="searcht"   placeholder="search" name="search">
+            <div class="form-con">
+            <input class="search" type="searcht"   placeholder="search" name="search">
 
-            <select name="cat" id="" >
+            <select class="cat=option" name="cat" id="" >
                 <option value="educational">educational</option>
                 <option value="personal">personal</option>
                 <option value="uncategorized">uncategorized</option>
@@ -30,6 +33,69 @@
                 <option  value="All">All</option>
             </select>
         </form>
+        <button class="addnote">add note</button>
+        </div>
+        <div class="body-container">
+            <a href="#">
+                <div class="note">
+                    <h3>this is my first note</h3>
+                    <h5>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates enim sint eligendi voluptate sunt non perspiciatis, fuga rem blanditiis ea.</h5>
+                    <p class="date">3 may</p>
+                </div>
+            </a>
+            <a href="#">
+                <div class="note">
+                    <h3>this is my first note</h3>
+                    <h5>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates enim sint eligendi voluptate sunt non perspiciatis, fuga rem blanditiis ea.</h5>
+                    <p class="date">3 may</p>
+                </div>
+            </a>
+            <a href="#">
+                <div class="note">
+                    <h3>this is my first note</h3>
+                    <h5>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates enim sint eligendi voluptate sunt non perspiciatis, fuga rem blanditiis ea.</h5>
+                    <p class="date">3 may</p>
+                </div>
+            </a>
+            <a href="#">
+                <div class="note">
+                    <h3>this is my first note</h3>
+                    <h5>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates enim sint eligendi voluptate sunt non perspiciatis, fuga rem blanditiis ea.</h5>
+                    <p class="date">3 may</p>
+                </div>
+            </a>
+            <a href="#">
+                <div class="note">
+                    <h3>this is my first note</h3>
+                    <h5>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates enim sint eligendi voluptate sunt non perspiciatis, fuga rem blanditiis ea.</h5>
+                    <p class="date">3 may</p>
+                </div>
+            </a>
+            <a href="#">
+                <div class="note">
+                    <h3>this is my first note</h3>
+                    <h5>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates enim sint eligendi voluptate sunt non perspiciatis, fuga rem blanditiis ea.</h5>
+                    <p class="date">3 may</p>
+                </div>
+            </a>
+            <a href="#">
+                <div class="note">
+                    <h3>this is my first note</h3>
+                    <h5>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates enim sint eligendi voluptate sunt non perspiciatis, fuga rem blanditiis ea.</h5>
+                    <p class="date">3 may</p>
+                </div>
+            </a>
+            <a href="#">
+                <div class="note">
+                    <h3>this is my first note</h3>
+                    <h5>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates enim sint eligendi voluptate sunt non perspiciatis, fuga rem blanditiis ea.</h5>
+                    <p class="date">3 may</p>
+                </div>
+            </a>
+        </div>
    </main>
+   <footer>
+        <p>codewitizzy&copy;2023</p>
+   </footer>
 </body>
 </html>

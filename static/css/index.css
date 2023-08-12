@@ -1,0 +1,82 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background: rgb(145, 144, 144);
+}
+header h2 {
+    text-align: center;
+    font-size: 29px;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+a::after{
+    color: black;
+}
+a:visited {
+    color: black;
+}
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    padding: 10px 50px;
+    font-size: 3em;
+    color: black;
+}
+
+.form-con {
+    margin-bottom: 20px;
+    justify-content: center;
+
+}
+.search {
+    padding: 10px;
+    width: 45%;
+    border-radius: 50px;
+    background: rgb(231, 231, 231);
+    margin-left: 20px;
+    border: none;
+
+}
+select {
+    padding: 10px;
+    width: 25%;
+    border-radius: 50px;
+    background: rgb(231, 231, 231);
+    border: none;
+    
+}
+.addnote {
+    padding: 10px;
+    width: 20%;
+    border-radius: 50px;
+    background: rgb(231, 231, 231);
+    border: none;
+}
+
+.note {
+    box-shadow: hsl(0,0%,70%) 0 0 10px;
+    margin: 20px 15px;
+    padding: 15px;
+    border-radius: 50px;
+}
+h5 {
+    padding: 10px 10px 10px 30px;
+}
+
+footer {
+    text-align: center;
+    font-size: large;
+    padding-top: 30px;
+    padding-bottom: 12px;
+
+}
