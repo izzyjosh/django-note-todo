@@ -55,7 +55,7 @@ def logout(request):
     return redirect("signin")
 
 
-def setpassword(request):
+def setpassword(request, uidb64, token):
     if request.method == "POST":
         email = request.POST.get("email")
         user = User.objects.get(email=email)
