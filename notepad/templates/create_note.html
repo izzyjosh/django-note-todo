@@ -1,3 +1,4 @@
+{% load static%}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/create.css' %}">
 </head>
 <body>
     <header>
@@ -20,15 +22,18 @@
     </header>
     <main>
         <form action="" method="post">
+            <div class="form-con">
+            <input id="title" type="text" name="title" placeholder="topic">
+            <input class="body-note" type="textarea" placeholder="Body of the note" name="body">
             <div class="check">
             <input type="checkbox" name="perdonal" >personnal
             <input type="checkbox" name="educational" >educational
             <input type="checkbox" name="uncategorized" >uncategorized
             <input type="checkbox" name="work" >work
             </div>
-            <input type="text" name="title" placeholder="topic">
-            <input type="textarea" placeholder="Body of the note" name="body">
+           
             <button>save note</button>
+            </div>
         </form>
     </main>
 </body>

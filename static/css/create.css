@@ -1,0 +1,82 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background: rgb(145, 144, 144);
+}
+
+header h2 {
+    text-align: center;
+    font-size: 29px;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a::after {
+    color: black;
+}
+
+a:visited {
+    color: black;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    padding: 10px 50px;
+    font-size: 3em;
+    color: black;
+}
+
+.form-con {
+    justify-content: center;
+    align-items: center;
+}
+
+#title {
+    padding: 15px;
+    width: 80%;
+    border-radius: 50px;
+    margin: 20px 10%;
+    box-shadow: hsl(0,0%,70%) 0 0 10px;
+    border: none;
+
+}
+.body-note {
+    width: 80%;
+    height: 50vh;
+    margin: 20px 10%;
+    border: none;
+    background: rgb(255, 255, 255);
+    box-shadow: hsl(0,0%,70%) 0 0 10px;
+    outline: none;
+
+}
+
+.check {
+    margin: 20px 10%;
+}
+
+input[type="checkbox"] {
+    margin: 10px;
+    text-align: center;
+
+}
+button {
+    padding: 12px;
+    width: 80%;
+    margin: 10px 10%;
+    background: blue;
+    border: 3px solid red;
+}
+
+
