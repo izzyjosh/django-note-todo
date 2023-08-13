@@ -18,3 +18,7 @@ def index(request):
     }
 
     return render(request, "index.html", context)
+
+
+def create(request):
+    return render(request, "create_note.html")
