@@ -61,6 +61,9 @@ a:visited {
     outline: none;
 
 }
+.body-note::placeholder {
+    
+}
 
 .check {
     margin: 20px 10%;
@@ -77,6 +80,23 @@ button {
     margin: 10px 10%;
     background: blue;
     border: 3px solid red;
+}
+footer {
+    text-align: center;
+    font-size: large;
+    font-weight: 400;
+    margin-top: 30px;
+}
+
+@media only screen and (min-width:658px) {
+
+    #title {
+        float: left;
+        }
+    .body-note {
+    
+        }
+    
 }
 
 
