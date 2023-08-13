@@ -65,7 +65,7 @@ select {
 
 .note {
     box-shadow: hsl(0,0%,70%) 0 0 10px;
-    margin: 20px 15px;
+    margin: 10px 20px;
     padding: 15px;
     border-radius: 50px;
 }
@@ -78,5 +78,15 @@ footer {
     font-size: large;
     padding-top: 30px;
     padding-bottom: 12px;
+
+}
+
+@media only screen and (min-width:658px) {
+    .body-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 5px;
+        justify-content: space-around;
+    }
 
 }
