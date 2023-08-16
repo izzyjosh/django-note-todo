@@ -36,33 +36,17 @@
         <button class="addnote">add note</button>
         </div>
         <div class="body-container">
+	   {%for note in notes%}
             <div class="notediv">
             <a href="#">
                 <div class="note">
-                    <h3>this is my first note</h3>
-                    <h5>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates enim sint eligendi voluptate sunt non perspiciatis, fuga rem blanditiis ea.</h5>
-                    <p class="date">3 may</p>
+			<h3>{{note.title}}</h3>
+		    <h5>{{note.body}}</h5>
+		    <p class="date">{{note.date}}</p>
                 </div>
             </a>
             </div>
-            <div class="notediv">
-            <a href="#">
-                <div class="note">
-                    <h3>this is my first note</h3>
-                    <h5>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates enim sint eligendi voluptate sunt non perspiciatis, fuga rem blanditiis ea.</h5>
-                    <p class="date">3 may</p>
-                </div>
-            </a>
-            </div>
-            <div class="notediv">
-            <a href="#">
-                <div class="note">
-                    <h3>this is my first note</h3>
-                    <h5>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates enim sint eligendi voluptate sunt non perspiciatis, fuga rem blanditiis ea.</h5>
-                    <p class="date">3 may</p>
-                </div>
-            </a>
-            </div>
+	  {%endfor%}
         </div>
    </main>
    <footer>
