@@ -1,56 +1,73 @@
-{% load static %}
+{%load static%}
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Notepad</title>
-    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <title>notepage</title>
+   <link rel="stylesheet" href="{% static 'css/index.css' %}">
 </head>
 <body>
    <header>
-        <div class="header-container">
-            <div class="notepad">
-                <a href="#">NotePad</a>
-            </div>
-            <div class="todo">
-                <a href="#">ToDo</a>
-            </div>
-        </div>
-        <h2>All Note</h2>
-   </header> 
+      <div class="header-container">
+         <div class="header1">
+            <a href="#"><h1>NotePad</h1></a>
+         </div>
+         <div class="header2">
+            <a href="#"><h1>ToDo</h1></a>
+         </div>
+      </div>
+      <h2>All Note</h2>
+   </header>
    <main>
-        <form action="" method="get">
-            <div class="form-con">
-            <input class="search" type="searcht"   placeholder="search" name="search">
-
-            <select class="cat=option" name="cat" id="" >
-                <option value="educational">educational</option>
-                <option value="personal">personal</option>
-                <option value="uncategorized">uncategorized</option>
-                <option value="work">work</option>
-                <option  value="All">All</option>
-            </select>
-        </form>
-        <button class="addnote">add note</button>
-        </div>
-        <div class="body-container">
-	   {%for note in notes%}
-            <div class="notediv">
-            <a href="#">
-                <div class="note">
-			<h3>{{note.title}}</h3>
-		    <h5>{{note.body}}</h5>
-		    <p class="date">{{note.date}}</p>
-                </div>
-            </a>
-            </div>
-	  {%endfor%}
-        </div>
+      <form action="">
+      <div class="form-container">
+         <div class="search">
+            <input type="search" placeholder="search" name="search">
+         </div>
+         <div class="add-note">
+            <button class="btn">add note</button>
+         </div>
+      </div>
+      </form>
+      <div class="note-container">
+         <div class="row">
+            <a href="#"><div class="note">
+               <h3>This is a new note</h3>
+               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum accusantium provident quia modi earum necessitatibus veniam debitis possimus repellat sunt.</p>
+               <p>march 23 2020</p>
+            </div></a>
+            <a href="#"><div class="note">
+               <h3>This is a new note</h3>
+               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum accusantium provident quia modi earum necessitatibus veniam debitis possimus repellat sunt.</p>
+               <p>march 23 2020</p>
+            </div></a>
+            <a href="#"><div class="note">
+               <h3>This is a new note</h3>
+               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum accusantium provident quia modi earum necessitatibus veniam debitis possimus repellat sunt.</p>
+               <p>march 23 2020</p>
+            </div></a>
+            <a href="#"><div class="note">
+               <h3>This is a new note</h3>
+               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum accusantium provident quia modi earum necessitatibus veniam debitis possimus repellat sunt.</p>
+               <p>march 23 2020</p>
+            </div></a>
+            <a href="#"><div class="note">
+               <h3>This is a new note</h3>
+               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum accusantium provident quia modi earum necessitatibus veniam debitis possimus repellat sunt.</p>
+               <p>march 23 2020</p>
+            </div></a>
+            <a href="#"><div class="note">
+               <h3>This is a new note</h3>
+               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum accusantium provident quia modi earum necessitatibus veniam debitis possimus repellat sunt.</p>
+               <p>march 23 2020</p>
+            </div></a>
    </main>
    <footer>
-        <p>codewitizzy&copy;2023</p>
+      <div class="footer">
+         <h3>codewitizzy&copy;2023</h3>
+      </div>
    </footer>
 </body>
 </html>

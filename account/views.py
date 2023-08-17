@@ -30,7 +30,7 @@ def signup(request):
                 messages.error(request, "email already exist")
         else:
             messages.error(request, "the username already exist")
-    return render(request, "signup.html")
+    return render(request, "account/signup.html")
 
 
 # function that handles the signin
@@ -45,7 +45,7 @@ def signin(request):
             return redirect("#")
         else:
             messages.error(request, "invalid email or password")
-    return render(request, "signin.html")
+    return render(request, "account/signin.html")
 
 
 # function that logs out user
