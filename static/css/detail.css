@@ -1,0 +1,51 @@
+       * {
+         padding: 0;
+         margin: 0;
+         box-sizing: border-box;
+      }
+      header {
+         background: #8c8c8c;
+         font-family: Sans-Serif;
+         font-size: 1.2em;
+      }
+       a {
+         text-decoration: none;
+         color: black;
+      }
+      header h2{
+         text-align: center;
+         padding: 10px 5px;
+      }
+      .header-container {
+         display: flex;
+         justify-content: space-around;
+         align-items: center;
+      }
+      .title {
+         text-align: center;
+         margin: 10px auto;
+         font-weight: 400;
+      }
+      .body {
+         padding: 10px;
+         font-weight: 300;
+         
+      }
+      .date {
+         text-align: right;
+         margin: 10px;
+         font-weight: 500;
+      }
+      .btn {
+         padding: 12px;
+         width: 80%;
+         margin: 70px 10% 10px 10%;
+         border: 5px solid red;
+         background: blue;
+         color: white;
+         border-radius: 50px;
+      }
+      .footer {
+         text-align: center;
+         
+      }

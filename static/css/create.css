@@ -1,89 +1,70 @@
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
-
-header {
-    background: rgb(145, 144, 144);
-}
-
-header h2 {
-    text-align: center;
-    font-size: 29px;
-    font-weight: 400;
-    margin-bottom: 10px;
-}
-
-a {
-    text-decoration: none;
-    color: black;
-}
-
-a::after {
-    color: black;
-}
-
-a:visited {
-    color: black;
-}
-
-.header-container {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 20px;
-    padding: 10px 50px;
-    font-size: 3em;
-    color: black;
-}
-
-.form-con {
-    justify-content: center;
-    align-items: center;
-}
-
-#title {
-    padding: 15px;
-    width: 80%;
-    border-radius: 50px;
-    margin: 20px 10%;
-    box-shadow: hsl(0,0%,70%) 0 0 10px;
-    border: none;
-
-}
-.body-note {
-    width: 80%;
-    height: 50vh;
-    margin: 20px 10%;
-    border: none;
-    background: rgb(255, 255, 255);
-    box-shadow: hsl(0,0%,70%) 0 0 10px;
-    outline: none;
-
-}
-
-.check {
-    margin: 20px 10%;
-}
-
-input[type="checkbox"] {
-    margin: 10px;
-    text-align: center;
-
-}
-button {
-    padding: 12px;
-    width: 80%;
-    margin: 10px 10%;
-    background: blue;
-    border: 3px solid red;
-}
-footer {
-    text-align: center;
-    font-size: large;
-    font-weight: 400;
-    margin-top: 30px;
-}
-
-
-
+      * {
+         padding: 0;
+         margin: 0;
+         box-sizing: border-box;
+      }
+      .header-con {
+         background: #cbdfe4;
+      }
+      .nav {
+         display: flex;
+         justify-content: space-between;
+         padding: 20px;
+         align-items: center;
+      }
+      .nav2 {
+         display: flex;
+         justify-content: space-between;
+         align-items: center;
+         padding: 20px;
+      }
+      .main-con {
+         display: grid;
+         grid-template-columns: 60% 40%;
+         grid-gap: 20px;
+      }
+      input[type="text"] {
+         padding: 10px;
+         width: 100%;
+         border-radius: 50px;
+         margin: 20px 2px;
+         border: none;
+         box-shadow: hsl(0, 0%, 70%) 0 0 10px;
+      }
+      textarea {
+         box-shadow: hsl(0, 0%, 70%) 0 0 10px;
+         border: none;
+         margin: 10px 5px;
+         height: 200px;
+         width: 100%;
+      }
+      select {
+         width: 80%;
+         padding: 8px;
+         border-radius: 50px;
+         margin: 20px 5px;
+         background: white;
+         border: none;
+         box-shadow: hsl(0, 0%, 70%) 0 0 10px;
+      }
+      button {
+         width: 80%;
+         padding: 10px;
+         border: 5px solid red;
+         background: blue;
+         color: white;
+         border-radius: 50px;
+         margin-top: 10px;
+      }
+      .btn {
+         padding: 12px;
+         margin: 5px;
+         
+      }
+      .footer {
+         text-align: center;
+         
+      }
+	.rd {
+         margin: 10px 0;
+      }

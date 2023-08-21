@@ -1,39 +1,65 @@
-{% load static%}
+{%load static%}
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="{% static 'css/create.css' %}">
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <title>sart</title>
+   <link rel="stylesheet" href="{% static 'css/create.css' %}">
 </head>
 <body>
-    <header>
-        <div class="header-container">
-            <div class="notepad">
-                <a href="#">NotePad</a>
+   <header>
+      <div class="header-con">
+         <div class="nav">
+         <div class="notepad">
+            <h1>Notepad</h1>
+         </div>
+         <div class="todo">
+            <h3>Todo</h3>
+         </div>
+         </div>
+         <div class="nav2">
+         <div class="status">
+            <h2>Create Note</h2>
+         </div>
+         <div class="logout">
+		 <a href="{% url 'logout'%}"><button class="btn">logout</button></a>
+         </div>
+         </div>
+      </div>
+   </header>
+   <main>
+      <form action="" method="post">
+	{%csrf_token%}
+      <div class="main-con">
+         <div class="fill">
+            <div class="title">
+               <input type="text" name="title" placeholder="title">
             </div>
-            <div class="todo">
-                <a href="#">ToDo</a>
+            <div class="body">
+               <textarea name="body" id="" cols="30" rows="10">body</textarea>
             </div>
-        </div>
-        <h2>Create Note</h2>
-    </header>
-    <main>
-        <form action="" method="post">
-	    {% csrf_token %}
-            <div class="form-con">
-                <div>
-			{{form}}
-		</div>
-            
-                <button>save note</button>
+         </div>
+         <div class="cat-btn">
+            <div class="cat">
+		{%for category in categories%}
+		<input class="rd" type="radio" name="cat" values="{{category.name}}">{{category.name}}
+		<br>
+		{%endfor%}
             </div>
-        </form>
-    </main>
-    <footer>
-        <p>codewitizzy&copy;2023</p>
-    </footer>
+            <div class="btn-div">
+               <button>save</button>
+            </div>
+         </div>
+      </div>
+      </form>
+   </main>
+   <footer>
+      <div class="footer">
+         <h3>codewitizzy&copy;2023</h3>
+      </div>
+   </footer>
 </body>
 </html>
+

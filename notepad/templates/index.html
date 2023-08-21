@@ -12,13 +12,14 @@
    <header>
       <div class="header-container">
          <div class="header1">
-            <a href="#"><h1>NotePad</h1></a>
+		 <a href="{% url 'index' %}"><h1>NotePad</h1></a>
          </div>
          <div class="header2">
             <a href="#"><h1>ToDo</h1></a>
          </div>
       </div>
       <h2>All Note</h2>
+   </header>
 
    <main>
       <form action="">
@@ -29,13 +30,13 @@
       </div>
       </form>
          <div class="add-note">
-            <a href="#"><button class="btn">add note</button></a>
+		 <a href="{% url 'createnote' %}"><button class="btn">add note</button></a>
          </div>
 
       <div class="note-container">
          <div class="row">
             {%for note in notes%}
-	    <a href="{% url 'detail' note.pk%}">
+	    <a href="{% url 'detail' note.pk %}">
 	    <div class="note">
 		 <h3>{{note.title}}</h3>
 		 <p>{{note.body}}</p>

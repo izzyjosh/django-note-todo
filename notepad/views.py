@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from django.db.models import Q
-from .models import Note
+from .models import Note, Category
 from django.views.generic import ListView, DetailView
 from django.views.generic.edit import CreateView
 from notepad.forms import Addform
@@ -35,5 +35,27 @@ class NoteDetailView(LoginRequiredMixin, DetailView):
        template_name = "detail.html"
        login_url = "signin"
        model = Note
+       context_object_name = "note"
 
 
+def createnote(request):
+    if request.method == "POST":
+
+        title = request.POST['title']
+        body = request.POST['body']
+        cat = request.POST['cat']
+
+        Note.objects.create(
+                title=title, 
+                body=body, 
+                category=cat, 
+                owner=request.user)
+
+        return redirect("index")
+    category = Category.objects.all()
+        
+    context = {
+            "categories":category, 
+            }
+
+    return render(request, "create_note.html", context)
