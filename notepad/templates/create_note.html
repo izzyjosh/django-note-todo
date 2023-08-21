@@ -22,17 +22,11 @@
     </header>
     <main>
         <form action="" method="post">
+	    {% csrf_token %}
             <div class="form-con">
-                <div class="text">
-                <input id="title" type="text" name="title" placeholder="topic">
-                <input class="body-note" type="textarea" placeholder="Body of the note" name="body" value="body">
-                </div>
-                <div class="check">
-                    <input type="checkbox" name="personal" >personnal
-                    <input type="checkbox" name="educational" >educational
-                    <input type="checkbox" name="uncategorized" >uncategorized
-                    <input type="checkbox" name="work" >work
-                </div>
+                <div>
+			{{form}}
+		</div>
             
                 <button>save note</button>
             </div>

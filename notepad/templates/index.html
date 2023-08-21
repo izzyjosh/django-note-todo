@@ -26,43 +26,21 @@
          <div class="search">
             <input type="search" placeholder="search" name="search">
          </div>
-         <div class="add-note">
-            <button class="btn">add note</button>
-         </div>
       </div>
       </form>
+         <div class="add-note">
+		 <a href="#"><button class="btn">add note</button></a>
+         </div>
+
       <div class="note-container">
          <div class="row">
+            {%for note in notes%}
             <a href="#"><div class="note">
-               <h3>This is a new note</h3>
-               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum accusantium provident quia modi earum necessitatibus veniam debitis possimus repellat sunt.</p>
-               <p>march 23 2020</p>
+		 <h3>{{note.title}}</h3>
+		 <p>{{note.body}}</p>
+		 <p>{{note.date}}</p>
             </div></a>
-            <a href="#"><div class="note">
-               <h3>This is a new note</h3>
-               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum accusantium provident quia modi earum necessitatibus veniam debitis possimus repellat sunt.</p>
-               <p>march 23 2020</p>
-            </div></a>
-            <a href="#"><div class="note">
-               <h3>This is a new note</h3>
-               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum accusantium provident quia modi earum necessitatibus veniam debitis possimus repellat sunt.</p>
-               <p>march 23 2020</p>
-            </div></a>
-            <a href="#"><div class="note">
-               <h3>This is a new note</h3>
-               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum accusantium provident quia modi earum necessitatibus veniam debitis possimus repellat sunt.</p>
-               <p>march 23 2020</p>
-            </div></a>
-            <a href="#"><div class="note">
-               <h3>This is a new note</h3>
-               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum accusantium provident quia modi earum necessitatibus veniam debitis possimus repellat sunt.</p>
-               <p>march 23 2020</p>
-            </div></a>
-            <a href="#"><div class="note">
-               <h3>This is a new note</h3>
-               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum accusantium provident quia modi earum necessitatibus veniam debitis possimus repellat sunt.</p>
-               <p>march 23 2020</p>
-            </div></a>
+	    {%endfor%}
    </main>
    <footer>
       <div class="footer">

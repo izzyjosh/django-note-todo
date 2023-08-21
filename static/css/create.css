@@ -61,9 +61,6 @@ a:visited {
     outline: none;
 
 }
-.body-note::placeholder {
-    
-}
 
 .check {
     margin: 20px 10%;
@@ -88,15 +85,5 @@ footer {
     margin-top: 30px;
 }
 
-@media only screen and (min-width:658px) {
-
-    #title {
-        float: left;
-        }
-    .body-note {
-    
-        }
-    
-}
 
 
