@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from django.db.models import Q
 from .models import Note
-from django.views.generic import ListView
+from django.views.generic import ListView, DetailView
 from django.views.generic.edit import CreateView
 from notepad.forms import Addform
 from django.contrib.auth.mixins import LoginRequiredMixin
@@ -29,4 +29,11 @@ class NoteListView(LoginRequiredMixin, ListView):
         context = super().get_context_data(**kwargs)
         context["notes"] = self.notes
         return context
-        
+
+
+class NoteDetailView(LoginRequiredMixin, DetailView):
+       template_name = "detail.html"
+       login_url = "signin"
+       model = Note
+
+

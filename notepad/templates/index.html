@@ -19,7 +19,7 @@
          </div>
       </div>
       <h2>All Note</h2>
-   </header>
+
    <main>
       <form action="">
       <div class="form-container">
@@ -29,18 +29,21 @@
       </div>
       </form>
          <div class="add-note">
-		 <a href="#"><button class="btn">add note</button></a>
+            <a href="#"><button class="btn">add note</button></a>
          </div>
 
       <div class="note-container">
          <div class="row">
             {%for note in notes%}
-            <a href="#"><div class="note">
+	    <a href="{% url 'detail' note.pk%}">
+	    <div class="note">
 		 <h3>{{note.title}}</h3>
 		 <p>{{note.body}}</p>
 		 <p>{{note.date}}</p>
             </div></a>
 	    {%endfor%}
+	</div>
+      </div>
    </main>
    <footer>
       <div class="footer">
