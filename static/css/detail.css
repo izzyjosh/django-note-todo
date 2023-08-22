@@ -29,7 +29,11 @@
       .body {
          padding: 10px;
          font-weight: 300;
-         
+	 width:100%;
+	 overflow-wrap:break-word;
+	 word-wrap:break-word;
+	 word-break:break-word;
+         border-collapse:collapse; 
       }
       .date {
          text-align: right;
@@ -39,7 +43,7 @@
       .btn {
          padding: 12px;
          width: 80%;
-         margin: 70px 10% 10px 10%;
+         margin: 5px 10% 5px 10%;
          border: 5px solid red;
          background: blue;
          color: white;

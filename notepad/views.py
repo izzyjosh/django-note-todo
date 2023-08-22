@@ -43,12 +43,17 @@ def createnote(request):
 
         title = request.POST['title']
         body = request.POST['body']
-        cat = request.POST['cat']
+        category = request.POST['category']
+
+        category, _ = Category.objects.get_or_create(
+                name__icontains=category, 
+                name=category
+        )
 
         Note.objects.create(
                 title=title, 
                 body=body, 
-                category=cat, 
+                category=category, 
                 owner=request.user)
 
         return redirect("index")
@@ -59,3 +64,11 @@ def createnote(request):
             }
 
     return render(request, "create_note.html", context)
+
+
+def delete(request, note_id):
+    note = Note.objects.get(pk=note_id)
+    note.delete()
+    return redirect("index")
+
+

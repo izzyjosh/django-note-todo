@@ -10,24 +10,15 @@
 </head>
 <body>
    <header>
-      <div class="header-con">
-         <div class="nav">
-         <div class="notepad">
-            <h1>Notepad</h1>
+      <div class="header-container">
+         <div class="header1">
+            <a href="#"><h1>NotePad</h1></a>
          </div>
-         <div class="todo">
-            <h3>Todo</h3>
-         </div>
-         </div>
-         <div class="nav2">
-         <div class="status">
-            <h2>Create Note</h2>
-         </div>
-         <div class="logout">
-		 <a href="{% url 'logout'%}"><button class="btn">logout</button></a>
-         </div>
+         <div class="header2">
+            <a href="#"><h1>ToDo</h1></a>
          </div>
       </div>
+      <h2>Create Note</h2>
    </header>
    <main>
       <form action="" method="post">
@@ -35,7 +26,7 @@
       <div class="main-con">
          <div class="fill">
             <div class="title">
-               <input type="text" name="title" placeholder="title">
+               <input id="title" type="text" name="title" placeholder="title">
             </div>
             <div class="body">
                <textarea name="body" id="" cols="30" rows="10">body</textarea>
@@ -43,10 +34,14 @@
          </div>
          <div class="cat-btn">
             <div class="cat">
-		{%for category in categories%}
-		<input class="rd" type="radio" name="cat" values="{{category.name}}">{{category.name}}
-		<br>
-		{%endfor%}
+		<input type="text" placeholder="Category" list="categories" name="category" required>
+		<datalist id="categories">
+		<select>
+		   {% for cat in categories %}
+		   <option value="{{ cat }}">{{ cat }}</option>
+		   {% endfor %}
+		</select>
+		</datalist>
             </div>
             <div class="btn-div">
                <button>save</button>
@@ -54,6 +49,7 @@
          </div>
       </div>
       </form>
+      <a href="{%url 'index'%}"><button id="back">back</button></button>
    </main>
    <footer>
       <div class="footer">
