@@ -72,3 +72,11 @@ def delete(request, note_id):
     return redirect("index")
 
 
+def update(request, note_id):
+    note = Note.objects.get(id=note_id)
+    form = Addform(request.POST or None, instance=note)
+
+    if form.is_valid():
+        form.save()
+        return redirect("index")
+    return render(request, "te.html", {"form":form})

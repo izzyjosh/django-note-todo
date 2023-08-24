@@ -2,12 +2,6 @@ from django import forms
 from notepad.models import Note
 
 
-CATEGORY = [
-        ("education", "educational"), 
-        ("personal", "personal"), 
-        ("work", "work")
-        ]
-
 class Addform(forms.ModelForm):
     class Meta:
         model = Note
@@ -16,14 +10,21 @@ class Addform(forms.ModelForm):
         widget = {
                 "title":forms.TextInput(attrs=
                 {
-                    "class":"form_input", 
+                    "class":"title", 
+                    "type":"text", 
                     "name":"title", 
                     "placeholder":"title", 
-                    "id":"title"
+                    "id":"title", 
                 }),
                 "body":forms.Textarea(attrs={
-                    "class":"body-note", 
+                    "class":"body", 
                     "name":"body", 
-                    "placeholder":"body of your note",}),}
+                    "placeholder":"body", 
+                    }), 
+                "category":forms.Select(attrs={
+                    "class":"cat", 
+                    "name": "category"
+                    })
+                }
 
                 
