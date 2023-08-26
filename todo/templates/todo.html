@@ -13,7 +13,7 @@
   <h2>My To Do List</h2>
   <form method="post">
      {%csrf_token%}
-     <input type="text" id="myInput" placeholder="Title..." name="subject">
+     <input type="text" id="myInput" placeholder="Title..." name="subject" required>
      <button class="addbtn">Add</button>
   </form>
 </div>

@@ -2,8 +2,11 @@ from django.shortcuts import render, redirect
 from .models import Todo
 
 def todos(request):
+    if not request.user.is_authenticated:
+        return redirect("signin")
     if request.method == "POST":
         todo = request.POST['subject']
+
 
         Todo.objects.create(owner=request.user, subject=todo)
 
