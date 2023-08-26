@@ -15,7 +15,7 @@
 		 <a href="{% url 'index' %}"><h1>NotePad</h1></a>
          </div>
          <div class="header2">
-            <a href="#"><h1>ToDo</h1></a>
+		 <a href="{% url 'todo' %}"><h1>ToDo</h1></a>
          </div>
       </div>
       <h2>All Note</h2>
@@ -39,9 +39,11 @@
 	    <a href="{% url 'detail' note.pk %}">
 	    <div class="note">
 		 <h3>{{note.title}}</h3>
-		 <p>{{note.body}}</p>
+		 <p>{{note.body|truncatewords:10}}</p>
 		 <p>{{note.date}}</p>
             </div></a>
+	    {%empty%}
+	       <h4>there is no result found for the search</h4>
 	    {%endfor%}
 	</div>
       </div>
