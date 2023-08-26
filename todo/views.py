@@ -17,3 +17,4 @@ def delete(request, todo_id):
     todo = Todo.objects.get(pk=todo_id)
     todo.delete()
     return redirect('todo')
+

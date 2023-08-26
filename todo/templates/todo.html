@@ -21,7 +21,7 @@
 <ul id="myUL">
 	{%for todo in todos%}
 	<div class="todo">
-	<li class="checked">{{todo.subject}}</li>
+	   <li>{{todo.subject}}</li>
 	<a href="{% url 'delete' todo.pk%}"><button class="btn">del</button></a>
 	</div>
 	{%endfor%}
